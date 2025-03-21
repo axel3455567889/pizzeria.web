@@ -4,65 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido de Pizzas</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #e60000;
+            text-align: center;
+        }
+
+        /* Contenedor del formulario */
+        #formulario {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        /* Estilo de los encabezados y textos */
+        label, h4 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Estilo para los select y botones */
+        select, input[type="text"], input[type="date"], input[type="radio"], input[type="checkbox"] {
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+
+        /* Botón de envío */
+        button {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        /* Estilo para las imágenes */
+        .pizza-image {
+            width: 100px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        /* Fondo */
+        body {
+            background-image: url('https://www.pxfuel.com/en/free-photo-xlrih');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1 id="estado"></h1>  
-    <form id="formulario">
-        <h2>Orden de venta</h2>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required minlength="3" maxlength="15"><br><br>
-        
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha" required><br><br>
-        
-        <h2>Pedido de Pizzas</h2>
-        <label for="pizza1">Pizza 1:</label>
-        <select id="pizza1" name="pizza1">
-            <option value="Mexicana">Mexicana ($10)</option>
-            <option value="Pepperoni">Pepperoni ($12)</option>
-            <option value="Hawaiana">Hawaiana ($11)</option>
-        </select>
-        <br><br>
+    <div class="container">
+        <h1>Pedido de Pizzas</h1>  
+        <form id="formulario">
+            <h2>Orden de venta</h2>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required minlength="3" maxlength="15"><br><br>
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+            
+            <h2>Pedido de Pizzas</h2>
+            <label for="pizza1">Pizza 1:</label>
+            <select id="pizza1" name="pizza1">
+                <option value="Mexicana">Mexicana ($10)</option>
+                <option value="Pepperoni">Pepperoni ($12)</option>
+                <option value="Hawaiana">Hawaiana ($11)</option>
+            </select>
+            <img src="mex.jpeg" class="pizza-image"><br><br>
 
-        <label for="pizza2">Pizza 2:</label>
-        <select id="pizza2" name="pizza2">
-            <option value="Mexicana">Mexicana ($10)</option>
-            <option value="Pepperoni">Pepperoni ($12)</option>
-            <option value="Hawaiana">Hawaiana ($11)</option>
-        </select>
-        <br><br>
+            <label for="pizza2">Pizza 2:</label>
+            <select id="pizza2" name="pizza2">
+                <option value="Mexicana">Mexicana ($10)</option>
+                <option value="Pepperoni">Pepperoni ($12)</option>
+                <option value="Hawaiana">Hawaiana ($11)</option>
+            </select>
+            <img src="pepe.jpg" class="pizza-image"><br><br>
 
-        <label for="pizza3">Pizza 3:</label>
-        <select id="pizza3" name="pizza3">
-            <option value="Mexicana">Mexicana ($10)</option>
-            <option value="Pepperoni">Pepperoni ($12)</option>
-            <option value="Hawaiana">Hawaiana ($11)</option>
-        </select>
-        <br><br>
+            <label for="pizza3">Pizza 3:</label>
+            <select id="pizza3" name="pizza3">
+                <option value="Mexicana">Mexicana ($10)</option>
+                <option value="Pepperoni">Pepperoni ($12)</option>
+                <option value="Hawaiana">Hawaiana ($11)</option>
+            </select>
+            <img src="hawaina.webp" class="pizza-image"><br><br>
 
-        <h2>Complementos</h2>
-        <h4 style="display: inline">Queso Extra</h4>
-        <input type="checkbox" name="QuesoExt" id="QuesoExt">
-          
-        <h4 style="display: inline">Refresco</h4>
-        <input type="checkbox" name="Refresco" id="Refresco">
-          
-        <h4 style="display: inline">Orilla de Queso</h4>
-        <input type="checkbox" name="OrQueso" id="OrQueso">
-          
-        <h4 style="display: inline">Papas</h4>
-        <input type="checkbox" name="Papas" id="Papas">
+            <h2>Complementos</h2>
+            <h4 style="display: inline">Queso Extra</h4>
+            <input type="checkbox" name="QuesoExt" id="QuesoExt">
+              
+            <h4 style="display: inline">Refresco</h4>
+            <input type="checkbox" name="Refresco" id="Refresco">
+              
+            <h4 style="display: inline">Orilla de Queso</h4>
+            <input type="checkbox" name="OrQueso" id="OrQueso">
+              
+            <h4 style="display: inline">Papas</h4>
+            <input type="checkbox" name="Papas" id="Papas">
 
-        <h2>Metodo de entrega</h2>
-        <h4 style="display: inline">Consumo local</h4>
-        <input type="radio" name="entrega" id="ConsLocal" value="Consumo local">
-        
-        <h4 style="display: inline">Envio a domicilio</h4>
-        <input type="radio" name="entrega" id="Envio" value="Envio a domicilio">
-        
-        <br><br>
-        <button type="button" onclick="guardarDatos()">ENVIAR PEDIDO</button>
-    </form>
+            <h2>Metodo de entrega</h2>
+            <h4 style="display: inline">Consumo local</h4>
+            <input type="radio" name="entrega" id="ConsLocal" value="Consumo local">
+            
+            <h4 style="display: inline">Envio a domicilio</h4>
+            <input type="radio" name="entrega" id="Envio" value="Envio a domicilio">
+            
+            <br><br>
+            <button type="button" onclick="guardarDatos()">ENVIAR PEDIDO</button>
+        </form>
+    </div>
 
     <script>
         function guardarDatos() {
